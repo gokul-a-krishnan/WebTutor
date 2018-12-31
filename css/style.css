@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -16,18 +16,18 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "PT Sans", sans-serif;
-  color: #33414a;
-  background-color: #f2f2f2;
+  color: #1b9cc6; /*bg black*/
+  background-color: #f2f2f2; /*Grey*/
 }
 
 a {
-  color: #7e4d7e;
+  color: #1b9cb6; /*catagory purple*/
   text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 header {
@@ -37,7 +37,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #33414a;
+  background-color: #1b9cc6; /*bg black 33414a*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Force Hardware Acceleration */
@@ -133,7 +133,7 @@ header::before {
   -webkit-transition: background-color 0.3s 0.3s;
   -moz-transition: background-color 0.3s 0.3s;
   transition: background-color 0.3s 0.3s;
-  background-color: #ffffff;
+  background-color: #ffffff; /*white*/
 }
 .cd-nav-trigger span::before, .cd-nav-trigger span::after {
   /* upper and lower lines of the menu icon */
@@ -169,7 +169,7 @@ header::before {
   transform: translateY(6px);
 }
 .nav-is-visible .cd-nav-trigger span {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0); /*white*/
 }
 .nav-is-visible .cd-nav-trigger span::before {
   -webkit-transform: translateY(0) rotate(-45deg);
@@ -201,7 +201,7 @@ header::before {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   visibility: hidden;
-  background: #1e262c;
+  background: #1b9cc6; /*old 1e262c*/
   -webkit-transition: visibility 0s 0.3s;
   -moz-transition: visibility 0s 0.3s;
   transition: visibility 0s 0.3s;
@@ -210,7 +210,7 @@ header::before {
   display: block;
   font-size: 1.8rem;
   padding: .9em 2em .9em 1em;
-  border-bottom: 1px solid #33414a;
+  border-bottom: 1px solid #1b9cc6;
   color: #ffffff;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
@@ -264,7 +264,7 @@ header::before {
   display: inline-block;
   height: 2px;
   width: 10px;
-  background: #485c68;
+  background: #ffffff; /*old 485c68*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -384,7 +384,7 @@ header::before {
   }
   .cd-main-nav li ul {
     height: 80px;
-    background-color: #7e4d7e;
+    background-color: #1b9cb6; /*old 7e4d7e*/
     /* padding left = logo size + logo left position*/
     padding: 0 5% 0 calc(5% + 124px);
     -webkit-transform: translateY(-80px);
@@ -479,7 +479,7 @@ header::before {
   z-index: 2;
   min-height: 100vh;
   padding-top: 50px;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /*Grey*/
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
