@@ -8,8 +8,9 @@ jQuery(document).ready(function($){
 	//mobile version - open/close navigation
 	$('.cd-nav-trigger').on('click', function(event){
 		event.preventDefault();
-		if($('header').hasClass('nav-is-visible')) $('.moves-out').removeClass('moves-out');
-		
+		if($('header').hasClass('nav-is-visible')){
+		  $('.moves-out').removeClass('moves-out');
+		}
 		$('header').toggleClass('nav-is-visible');
 		$('.cd-main-nav').toggleClass('nav-is-visible');
 		$('.cd-main-content').toggleClass('nav-is-visible');

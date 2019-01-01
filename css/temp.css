@@ -1,0 +1,264 @@
+@media only screen and (min-width: 1024px) {
+  .cd-main-nav {
+    position: static;
+    visibility: visible;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    /* padding left = logo size + logo left position*/
+    padding: 0 5% 0 calc(5% + 124px);
+    background: transparent;
+    text-align: right;
+  }
+  .cd-main-nav li {
+    display: inline-block;
+    height: 100%;
+    padding: 0 .4em;
+  }
+  .cd-main-nav li a {
+    display: inline-block;
+    padding: .8em;
+    line-height: 1;
+    font-size: 1.6rem;
+    border-bottom: none;
+    /* Prevent .course-trigger flicker is Safari */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .cd-main-nav li a:not(.course-trigger):hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: .6;
+  }
+  .cd-main-nav .go-back {
+    display: none;
+  }
+  .cd-main-nav .course-trigger {
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5em;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    transition: border 0.3s;
+  }
+  .cd-main-nav .course-trigger:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .cd-main-nav .course-trigger::before, .cd-main-nav .course-trigger::after {
+    top: 22px;
+    right: 17px;
+    background-color: #ffffff;
+    /* change transform-origin to rotate the arrow */
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: -webkit-transform 0.3s, width 0.3s, right 0.3s;
+    -moz-transition: -moz-transform 0.3s, width 0.3s, right 0.3s;
+    transition: transform 0.3s, width 0.3s, right 0.3s;
+  }
+  .cd-main-nav .course-trigger::before {
+    right: 23px;
+  }
+  .cd-main-nav .course-trigger, .cd-main-nav .placeholder {
+    padding-right: 2.4em;
+    padding-left: 1.1em;
+  }
+  .cd-main-nav li ul {
+    height: 80px;
+    background-color: #1b9cb6; /*old 7e4d7e*/
+    /* padding left = logo size + logo left position*/
+    padding: 0 5% 0 calc(5% + 124px);
+    -webkit-transform: translateY(-80px);
+    -moz-transform: translateY(-80px);
+    -ms-transform: translateY(-80px);
+    -o-transform: translateY(-80px);
+    transform: translateY(-80px);
+    -webkit-transition: -webkit-transform 0.3s 0.2s;
+    -moz-transition: -moz-transform 0.3s 0.2s;
+    transition: transform 0.3s 0.2s;
+  }
+  .cd-main-nav li ul li {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+    -webkit-transition: -webkit-transform 0.3s 0s, opacity 0.3s 0s;
+    -moz-transition: -moz-transform 0.3s 0s, opacity 0.3s 0s;
+    transition: transform 0.3s 0s, opacity 0.3s 0s;
+  }
+  .cd-main-nav .placeholder {
+    /* never visible or clickable- it is used to take up the same space as the .course-trigger */
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-event: none;
+  }
+  .cd-main-nav.moves-out > li > a {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .cd-main-nav.moves-out > li > ul {
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .cd-main-nav.moves-out > li ul li {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s 0.2s, opacity 0.3s 0.2s;
+    -moz-transition: -moz-transform 0.3s 0.2s, opacity 0.3s 0.2s;
+    transition: transform 0.3s 0.2s, opacity 0.3s 0.2s;
+  }
+  .cd-main-nav.moves-out .course-trigger::before, .cd-main-nav.moves-out .course-trigger::after {
+    width: 14px;
+    right: 17px;
+  }
+  .cd-main-nav.moves-out .course-trigger::before {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+  .cd-main-nav.moves-out .course-trigger::after {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+.cd-main-content::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  display: none;
+  content: 'mobile';
+}
+@media only screen and (min-width: 1024px) {
+  .cd-main-content::before {
+    content: 'desktop';
+  }
+}
+
+.cd-main-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: #f2f2f2; /*Grey*/
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-main-content.nav-is-visible {
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+@media only screen and (min-width: 1024px) {
+  .cd-main-content {
+    padding-top: 80px;
+  }
+  .cd-main-content.nav-is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.no-js .cd-nav-trigger, .no-js .course-trigger {
+  display: none;
+}
+
+.no-js header {
+  position: relative;
+  height: auto;
+}
+
+.no-js .cd-logo img {
+  margin-bottom: 14px;
+}
+
+.no-js .cd-main-nav {
+  position: static;
+  width: 100%;
+  height: auto;
+  visibility: visible;
+  overflow: visible;
+}
+.no-js .cd-main-nav li {
+  display: inline-block;
+}
+.no-js .cd-main-nav li:last-child {
+  display: block;
+}
+.no-js .cd-main-nav .go-back {
+  display: none;
+}
+.no-js .cd-main-nav li ul {
+  position: static;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+@media only screen and (min-width: 1024px) {
+  .no-js .cd-main-nav {
+    height: 80px;
+  }
+  .no-js .cd-main-nav li ul {
+    position: absolute;
+    top: 80px;
+  }
+  .no-js .cd-main-nav li ul li {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .no-js .cd-main-nav li ul li:last-child {
+    display: none;
+  }
+}
+
+.no-js .cd-main-content {
+  padding-top: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .no-js .cd-main-content {
+    padding-top: 80px;
+  }
+}
